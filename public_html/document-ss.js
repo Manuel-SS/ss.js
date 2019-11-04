@@ -1,14 +1,10 @@
 /*!
- * Synergy Structure JavaScript (SS.JS) framework version 0.9.0
- * http://synergystructure.com/js
- */
-
-/**
- * @license
- * Copyright © 2019 Synergy Structure and other contributors.
- * Released under the MIT license.
+ * Synergy Structure JavaScript framework v0.8.0
+ * http://synergystructure.com/
+ *
+ * Copyright Synergy Stucture and other contributors
+ * Released under the MIT license
  * http://synergystructure.com/license
- * This is free software with ABSOLUTELY NO WARRANTY, to the extent permitted by applicable law.
  */
 
 "use strict";
