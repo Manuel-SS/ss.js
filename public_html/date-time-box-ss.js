@@ -1,7 +1,7 @@
 /*!
- * Synergy Structure JavaScript framework v1.0.0
- * http://synergystructure.com/js
- * 
+ * Synergy Structure JavaScript framework v0.8.0
+ * http://synergystructure.com/
+ *
  * Copyright Synergy Stucture and other contributors
  * Released under the MIT license
  * http://synergystructure.com/license
