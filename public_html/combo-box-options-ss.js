@@ -1,0 +1,4 @@
+// TODO Add documentation
+const COMBO_BOX_PICKER_SPACE_REDUCTION_IN_FULL_SCREEN = 20;
+// TODO Add documentation
+const TOLERATE_MISSING_COMBO_BOX_PICKER_OPTION_VALUE = true;

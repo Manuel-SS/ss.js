@@ -1,0 +1,184 @@
+@charset "UTF-8";
+
+/*
+    Created on : 28 Jul 2019, 20:28:58
+*/
+
+.date-picker > .calendar {
+    display:table;
+    clear:both;
+}
+.date-picker > .calendar > .week-days,
+.date-picker > .calendar > .week-header-days {
+    padding:0px;
+    display:table-row;
+    max-height:40px;
+    clear:both;
+}
+.date-picker > .calendar > .week-days > div,
+.date-picker > .calendar > .week-header-days > div {
+    display:table-cell;
+}
+.date-picker > .calendar > .week-days > div {
+    padding:0.5em;
+}
+.date-picker > .calendar > .week-header-days > div {
+    padding:0px 0.5em 0.5em 0.5em;
+}
+.date-picker > .calendar > .week-days > div > p,
+.date-picker > .calendar > .week-header-days > div > p {
+    text-align:right;
+    font:16px monospace;
+    user-select: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+.date-picker > .calendar > .week-days > div:not(.week-number):not(.unsupported-day):hover {
+    background-color:#99ccff;
+    cursor:pointer;
+}
+.date-picker > .calendar > .week-days > .selected-day {
+    background-color:#3399ff;
+}
+.date-picker > .calendar > .week-days > .selected-day:hover {
+    background-color:#0066cc !important;
+}
+.date-picker > .calendar > .week-days > .other-month-week-day {
+    color:#d1d1d1;
+}
+.date-picker > .calendar > .week-days > .other-month-week-day:hover {
+    color:#7f7f7f;
+}
+.date-picker > .calendar > .week-days > .unsupported-day {
+    /*background-color:#d1d1d1;*/
+}
+.date-picker > .calendar > .week-days > .week-number {
+    border-right:1px solid #80d734;
+    cursor:default;
+    padding:0px 0.5em 0px 0px;
+}
+.date-picker > .calendar > .week-days:last-of-type > div:not(.week-number) {
+    border-bottom:1px solid #e5e5e5;
+}
+
+.date-picker > header,
+.date-picker > footer {
+    box-sizing:border-box;
+    padding:2px 2px 0px 2px;
+}
+.time-picker > header {
+    box-sizing:border-box;
+    padding:2px;
+}
+.date-picker > header > input[type="number"],
+.date-picker > header > select,
+.date-picker > header > div,
+.time-picker > header > select,
+.date-picker > footer > select {
+    display:inline-block;
+    border:0px none transparent;
+    box-sizing:border-box;
+    height:100%;
+    /*padding:0px 2px;*/
+}
+.date-picker > footer > select {
+    float:right;
+}
+.date-picker > header > input[type="number"],
+.date-picker > header > select,
+.time-picker > header > select,
+.date-picker > header > select > option,
+.time-picker > header > select > option,
+.date-picker > footer > select {
+    font-size:11px;
+    border:1px solid #939598;
+    background-color:#f3f3f3;
+}
+.date-picker > header > input[type="number"],
+.time-picker > header > select,
+.date-picker > header > select {
+    border-radius:4px;
+/*    margin-right:4px;*/
+    margin:2px;
+    padding:1px;
+}
+.date-picker > header > div {
+    background-color:#80d734;
+    color:white;
+}
+.date-picker > header > div > p {
+    padding:0px 2px;
+    cursor:pointer;
+}
+.date-picker > footer > span {
+    float:right;
+    display:inline-block;
+
+}
+.date-picker > header > nav,
+.time-picker > header > .navigation {
+    display:inline-block;
+    float:right;
+    height:22px;
+    padding:0px 2px;
+}
+.date-picker > header > nav > span,
+.time-picker > header > .navigation > span {
+    background-color:#e5e5e5;
+    border:1px solid #cccccc;
+    box-shadow: 1px 1px 0px rgba(0,0,0,0.05);
+    cursor:pointer;
+    display:inline-block;
+    float:left;
+    height:8px;
+    margin-bottom:2px;
+    margin-top:2px;
+    padding:4px;
+    width:8px;
+}
+.date-picker > header > nav > span > a,
+.time-picker > header > .navigation > span > a {
+    display:block;
+    height:8px;
+    width:8px;
+}
+.date-picker > header > nav,
+.date-picker > header > nav > span,
+.date-picker > footer > span,
+.time-picker > header > .navigation,
+.time-picker > header > .navigation > span {
+    user-select: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+.date-picker > header > nav > span:hover,
+.time-picker > header > .navigation > span:hover {
+    background-color:#cccccc;
+}
+.date-picker > header > nav > span:active,
+.time-picker > header > .navigation > span:active {
+    background-color:#b2b2b2;
+}
+.date-picker > header > nav > span + span,
+.time-picker > header > .navigation > span + span {
+    margin-left:2px;
+}
+.date-picker .previous-month-button .vector-image {
+    background-position:0px -88px;
+}
+.date-picker .current-month-button .vector-image,
+.time-picker  .current-time {
+    background-position:0px -72px;
+}
+.date-picker .next-month-button .vector-image {
+    background-position:0px -80px;
+}
+.date-picker .close-button .vector-image,
+.time-picker > header > .navigation > .close-button {
+    background-position:0px -40px;
+}
+
