@@ -68,7 +68,7 @@ const FRAMEWORK = Object.freeze({
      * @constant
      * @type {String}
      */
-    version: "0.9.0"
+    version: "0.8.0"
 
 });
 
