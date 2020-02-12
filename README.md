@@ -2,4 +2,4 @@
 
 # The SS.JS framework
 
-This is the master branch, where version 1.0 will be hosted.
+This is version 0.9 of the framework.
