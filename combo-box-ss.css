@@ -1,0 +1,82 @@
+@charset "UTF-8";
+
+/* Created on 28 Jul 2019, 20:27:04 */
+
+/* Combo Box Picker */
+
+.combo-box[disabled] {
+    font-style:oblique;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+.combo-picker {
+    min-width:200px;
+    overflow-y:scroll;
+}
+.combo-picker > header {
+    clear:both;
+    float:left;
+    width:calc(100% - 16px);
+}
+.combo-picker > header > input[type="text"] {
+    width:calc(100% - 16px);
+    margin:2px;
+    float:right;
+}
+.combo-picker > header > .close-icon {
+    display:block;
+    float:right;
+    height:8px;
+    width:8px;
+    background-position-x:0px;
+    background-position-y:-48px;
+    margin:4px;
+}
+.combo-picker > header > .close-icon:hover {
+    background-position-y: -64px;
+}
+.combo-picker > ul {
+    float:left;
+    list-style:none outside none;
+    width:100%;
+}
+.combo-picker > * {
+    user-select: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+.combo-picker > ul > li {
+    width:calc(100% - 16px);
+    display:block;
+    float:left;
+    clear:both;
+    cursor:pointer;
+    padding:4px 8px;
+}
+.combo-picker > ul > li:hover {
+    background-color:#99ccff;
+}
+.combo-picker > ul > .selected {
+    background-color:#3399FE;
+}
+.combo-picker > ul > .selected:hover {
+    background-color:#0066cc !important;
+}
+.combo-picker > ul > li:not([data-key]) {
+    color:#999999;
+    font-style:oblique;
+}
+
+.combo-box > header {
+    width:100%;
+    float:left;
+}
+
+
+
+
+

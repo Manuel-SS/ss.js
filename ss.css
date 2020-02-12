@@ -1,0 +1,195 @@
+@charset "UTF-8";
+
+/*
+    Created on : 28 Jul 2019, 20:25:16
+*/
+
+body,
+header,
+section,
+footer,
+div,
+p,
+input,
+ul {
+    margin:0px;
+    padding:0px;
+}
+
+.vector-image {
+    background-image:url(images.svg);
+    background-color:transparent;
+    background-repeat:no-repeat;
+    background-attachment:scroll;
+}
+
+input, textarea {
+    box-sizing:border-box;
+    outline:none;
+}
+
+input:focus,
+textarea:focus,
+.box-frame > input:focus + div {
+    border:1px solid deepskyblue;
+    box-shadow:0 0 5px deepskyblue;
+}
+.box-frame > input:focus  {
+    border-right:none;
+}
+.box-frame > input:focus + div {
+    border-left:none;
+}
+
+.box-frame > .help-icon,
+.box-frame > .help-instruction-icon {
+    float:left;
+}
+
+.box-frame {
+    min-width:100px;
+    width:250px;
+    display:block;
+}
+.box-frame > input, textarea {
+    float:left;
+}
+.box-frame > .icon {
+    background-color:white;
+    float:left;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    border-bottom:1px solid #A9A9A9;
+    border-top:1px solid #A9A9A9;
+    border-right:1px solid #A9A9A9;
+}
+.box-frame > .icon > div {
+    width:8px;
+    height:8px;
+    margin:4px;
+}
+.box-frame > .icon:not(.icon-disabled) > div {
+    background-position-y:-112px;
+}
+.box-frame > .icon:not(.icon-disabled):hover > div {
+    background-position-y:-120px;
+}
+.box-frame > .icon-down > div {
+    background-position-x:0px;
+}
+.box-frame > .icon-up > div {
+    background-position-x:-8px;
+}
+.box-frame > .icon-disabled {
+    cursor:default;
+}
+.box-frame > .icon-disabled > div {
+    background-image:none;
+}
+
+.box-frame > .box-frame {
+    float:left;
+}
+
+select,
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="number"] {
+    border:1px solid #A9A9A9;
+    padding:3px;
+}
+
+textarea {
+    width: 98%
+}
+
+button {
+    display:block;
+    padding:2px 12.5px;
+    text-transform: none;
+    letter-spacing:1px;
+    background-color:var(--bs-green-color);
+    color:white;
+    border-radius:2px;
+    cursor:pointer;
+    border-left:1px solid #C8C8C8;
+    border-top:1px solid #C8C8C8;
+    border-right:1px solid #7a7a7a;
+    border-bottom:1px solid #7a7a7a;
+    background:linear-gradient(to bottom, #001e41, #000E1E);
+}
+button:active {
+    background:linear-gradient(to bottom, #000E1E, #001e41);
+}
+button:hover {
+    color:#dadada;
+}
+button + button {
+    margin-left:2px;
+}
+button:disabled {
+    background-color:#999999;
+    cursor:not-allowed;
+}
+
+input:required,
+textarea:required {
+/*    border-right:4px solid var(--bs-green-color);*/
+}
+
+input:valid,
+textarea:valid,
+.box[data-valid="t"] {
+    border-left:4px solid #00ff15;
+}
+
+input:invalid,
+textarea:invalid,
+.box[data-valid="f"] {
+    border-left:4px solid #ff0000;
+}
+
+.box[readOnly]:focus {
+    background:lightblue;
+}
+.box[readOnly] {
+    color:#585A63;
+    font-style:oblique;
+    cursor:pointer;
+}
+
+.picker {
+    position:absolute;
+    display:block;
+    top:auto;
+    left:auto;
+    z-index:12;
+    width:auto;
+    height:auto;
+    border:2px solid #666;
+    background-color:#f3f3f3;
+    box-shadow:2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+::-webkit-scrollbar,
+::-webkit-scrollbar-button {
+    width:9px;
+    height:9px;
+}
+::-webkit-scrollbar-track {
+    background:#eee;
+    /*border:thin solid lightgray;*/
+    box-shadow:0px 0px 3px #dfdfdf inset;
+    border-radius:10px;
+}
+::-webkit-scrollbar-thumb {
+    background:#999;
+    border:thin solid gray;
+    border-radius:10px;
+}
+::-webkit-scrollbar-thumb {
+    background:#7d7d7d;
+}
