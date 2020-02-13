@@ -44,3 +44,4 @@ Changes:
 
 * ss.js:    COMMON_TEXT_LIST.invalidPropertyCannotBeNullorUndefinedTemplate has two properties now (one to specify the name of the object and one to specify the name of the property).
 * ss.js:    COMMON_TEXT_LIST.invalidPropertyDataTypeTemplate has one extra property now (to specify the name of the object).
+* ss.js:    Method WebService.createRequest() has now only one parameter: configuration. See the method documentation for more information.
