@@ -299,7 +299,7 @@ function isNullOrUndefined(object) {
  * @description The callback function to execute to check the data type of the specified value.
  * @callback DataTypeChecker
  * @param {Object} value The value to check, which is never null or undefined.
- * @returns {Boolean} If the specified value is approved.
+ * @returns {Boolean} If the specified value is approved. 
  * @public
  * @since 1.0
  * @author Manuel Milosavljević <manuel@synergystructure.com>
@@ -467,7 +467,7 @@ function checkOptionalBoolean(argument, name) {
 }
 
 /**
- * @description Returnes the specified string as a string that contains a double quote at the beginning and end. The specified string may not
+ * @description Returnes the specified string as a string that contains a double quote at the beginning and end. The specified string may not 
  * @param {Number} value The number.
  * @returns {String} The specified string as a string that contains a double quote at the beginning and end.
  * @throws {Error} If the value contains a double quote (U+0022).
@@ -1409,7 +1409,7 @@ class UnicodeError extends Error {
     }
 }
 /**
- * @description Defines a surrogate pair in Unicode.
+ * @description Defines a surrogate pair in Unicode. 
  * @public
  * @since 1.0
  * @author Manuel Milosavljević <manuel@synergystructure.com>
@@ -2265,7 +2265,7 @@ function createStringFromTemplate(templateString, ...parameterList) {
 function getSingleValueFromString(templateString, value) {
     checkRequiredString(templateString, "templateString");
     checkRequiredString(value, "value");
-
+   
     if (value.isEmpty())
         return undefined;
 
@@ -2445,7 +2445,7 @@ Array.prototype.isEmpty = function () {
 };
 /**
  * @description Checks if the specified array is empty (null, undefined or having no items) or not.
- * @param {Array} array The array.
+ * @param {Array} array The array. 
  * @returns {Boolean} If the specified array is empty (null, undefined or having no items) or not.
  * @throws {TypeError} If the specified array is not an instance of Array.
  * @public
@@ -3144,7 +3144,7 @@ class RgbColor {
             if (!(alphaCode >= 0.0 &&
                     alphaCode <= 1.0))
                 throw `Invalid alpha code (${alphaCode}) found.`;
-
+    
             colorList.push(alphaCode);
             name += "A";
         } else if (arguments.length !== 3)
@@ -3357,7 +3357,7 @@ class Id64Error extends Error {
  */
 class Id64 {
     /* An ID64 digit consists out of 6 bits. There are thus 64 of these digits and each one of them is mapped to an ASCII character:
-     *
+     * 
      * ********* * ************* *
      * Digit     *   Character   *
      * ********* * ************* *
@@ -3367,7 +3367,7 @@ class Id64 {
      *      62   *           _   *
      *      63   *           :   *
      * ********* * ************* *
-     *
+     * 
      * In XML an ID64 can be safely used as an ID and it doesn't need to be encoded when used in an URI.
      */
 
@@ -3479,7 +3479,6 @@ class Id64 {
         return string;
     }
 }
-
 //</editor-fold>
 //<editor-fold defaultstate="collapsed" desc="Client ID">
 /**
@@ -3623,7 +3622,7 @@ class Uuid64 {
     }
     /**
      * @description Checks the validity of the specified client ID.
-     * @param {String} uuid64
+     * @param {String} uuid64 
      * @returns {Boolean}
      */
     static isValid(uuid64) {
@@ -4472,7 +4471,7 @@ HTMLDocument.prototype.getRequiredElementById = function (id) {
     if (isNullOrUndefined(element))
         throw new Error("Required element not found.");
 
-    return element;
+    return element;    
 };
 /**
  * @description Remove a element by its ID.
@@ -4568,7 +4567,7 @@ HTMLElement.prototype.getRequiredElementById = function (id) {
     if (isNullOrUndefined(element))
         throw new Error("Required element not found.");
 
-    return element;
+    return element;    
 };
 //</editor-fold>
 //<editor-fold defaultstate="collapsed" desc="DOM">
@@ -5085,7 +5084,7 @@ HTMLElement.prototype.getElementByTagName = function (name) {
  * @public
  * @since 1.0
  * @author Manuel Milosavljević <manuel@synergystructure.com>
- * @see Node.insertBefore()
+ * @see Node.insertBefore() 
  */
 HTMLElement.prototype.insertAfter = function (node, referenceNode) {
     if (isNullOrUndefined(node))
@@ -5483,7 +5482,7 @@ HTMLElement.createNew = function (tagName, parent, id) {
         parent.appendChild(element);
     else if (parent instanceof Tab)
         parent.body.appendChild(element);
-    else
+    else 
         throw new Error("The specified parent is unknown.");
 
     return element;
@@ -6225,7 +6224,7 @@ function isTableHeaderCellElement(element) {
  * @param {Boolean} [isRequired=false] If the input element must have a value filled out by the user.
  * @param {Boolean} [isHidden] If the input element must be hidden from the user.
  * @param {Number} [maximumLength] The maximum number of characters (in Unicode code points) that the user can enter.
- * @param {String} [pattern] A regular expression that the value is checked against.
+ * @param {String} [pattern] A regular expression that the value is checked against. 
  * @returns {HTMLInputElement} The new instance of HTMLInputElement.
  * @throws {String} If "isHidden" is not null or undefined and neither a boolean.
  * @throws {TypeError} If "minimumLength" is not null or undefined and neither a number.
@@ -6800,7 +6799,7 @@ function getBinaryPrefixIndex(bytes) {
      *   zebi     *          7   *          22   *
      *   yobi     *          8   *          25   *
      * ********** * ************ * ************* *
-     *
+     * 
      * Thus, dividing the number of digits by 3 and returning the floored value, minus one is the estimated binary prefix. If the estimated binary prefix is lower than -1, no fitting binary prefix is
      * available. If the estimated binary prefix is lower than Math.pow(1024, [estimated binary prefix] + 1) then the correct binary prefix is the estimated one minus one, otherwise it is the
      * estimated one.
@@ -7424,7 +7423,7 @@ class CssTable {
 
         if (!isNullOrUndefined(className))
             this.body.classList.set(className);
-
+        
         /**
          * @description The number of cells per rows.
          * @type {Number}
@@ -7697,7 +7696,7 @@ HTMLElement.prototype.getBoxWidth = function () {
     return this.getBoundingClientRect().width +
             getFromPixelStatement(elementStyle.marginLeft) +
             getFromPixelStatement(elementStyle.marginRight);
-
+            
 };
 //</editor-fold>
 //</editor-fold>
@@ -8271,7 +8270,7 @@ function parseUrl(unparsedUrl) {
 //</editor-fold>
 //<editor-fold defaultstate="collapsed" desc="Localization">
 /**
- *
+ * 
  * @description Defines a locale.
  * @public
  * @since 1.0
@@ -8899,7 +8898,7 @@ const HTTP_STATUS_CODE_LIST = {
          */
         badrequest: 400,
         /**
-         * @description
+         * @description 
          * @type {Number}
          */
         unauthorized: 401,
@@ -9078,7 +9077,7 @@ const HTTP_STATUS_CODE_LIST = {
  * @readonly
  * @enum {String}
  */
-const CRUD_HTTP_METHOD_LIST = Object.freeze({
+const CRUD_HTTP_METHOD_LIST = {
     /**
      * Create operation, corresponds to HTTP method POST.
      */
@@ -9095,7 +9094,8 @@ const CRUD_HTTP_METHOD_LIST = Object.freeze({
      * Delete operation, corresponds to HTTP method DELETE.
      */
     "delete": "DELETE"
-});
+};
+Object.freeze(CRUD_HTTP_METHOD_LIST);
 /**
  * @description Defines a representation of a network error.
  * @public
@@ -9446,10 +9446,10 @@ WebService.createRequest = configuration => {
      * @author Manuel Milosavljević <manuel@synergystructure.com>
      */
     function throwException(error) {
-        if (!onException)
+        if (!configuration.isPropertyNullOrUndefined("onException"))
             throw error;
 
-        onException(error, request);
+        configuration.onException(error, request);
     }
     /**
      * @description Creates a new {@link NetworkError} with the specificed HTTP status details and throws it with {@link throwException()}.
@@ -9461,21 +9461,48 @@ WebService.createRequest = configuration => {
      * @author Manuel Milosavljević <manuel@synergystructure.com>
      */
     function throwHttpException(httpStatusCode, httpStatusDescription) {
-        throwException(new NetworkError(getOfflineLocalizedText("a network error has occurred network exception message"), httpStatusCode, httpStatusDescription));
+        throwException(new NetworkError("A network error has occurred.", httpStatusCode, httpStatusDescription));
     }
-    // TODO Add documentation
+    /**
+     * @description Checks the specified configuration property and throws an error if the argument is not approved by the specified checker.
+     * @param {String} name The name of the configuration property.
+     * @param {DataTypeChecker} checker The checker.
+     * @param {String} dataTypeName The name of the configuration property's data type.
+     * @return {undefined}
+     * @private
+     * @since 1.0
+     * @author Manuel Milosavljević <manuel@synergystructure.com>
+     */
     function checkConfigurationProperty(name, checker, dataTypeName) {
         if (!checker(configuration[name]))
             throw new TypeError(createStringFromTemplate(COMMON_TEXT_LIST.invalidPropertyCannotBeNullorUndefinedTemplate, configurationName, name, dataTypeName));
     }
-    // TODO Add documentation
+    /**
+     * @description Checks the specified configuration property and throws an error if the argument is null, undefined or not approved by the specified checker.
+     * @param {String} name The name of the configuration property.
+     * @param {DataTypeChecker} checker The checker.
+     * @param {String} dataTypeName The name of the configuration property's data type.
+     * @return {undefined}
+     * @private
+     * @since 1.0
+     * @author Manuel Milosavljević <manuel@synergystructure.com>
+     */
     function checkRequiredConfigurationProperty(name, checker, dataTypeName) {
         if (configuration.isPropertyNullOrUndefined(name))
             throw new TypeError(createStringFromTemplate(COMMON_TEXT_LIST.invalidPropertyCannotBeNullorUndefinedTemplate, configurationName, name));
 
         checkConfigurationProperty(name, checker, dataTypeName);
     }
-    // TODO Add documentation
+    /**
+     * @description Checks the specified configuration property and throws an error if the argument is not null or undefined and not approved by the specified checker.
+     * @param {String} name The name of the configuration property.
+     * @param {DataTypeChecker} checker The checker.
+     * @param {String} dataTypeName The name of the configuration property's data type.
+     * @return {undefined}
+     * @private
+     * @since 1.0
+     * @author Manuel Milosavljević <manuel@synergystructure.com>
+     */
     function checkOptionalConfigurationProperty(name, checker, dataTypeName) {
         if (!configuration.isPropertyNullOrUndefined(name))
             checkConfigurationProperty(name, checker, dataTypeName);
@@ -9507,7 +9534,7 @@ WebService.createRequest = configuration => {
     }
 
     try {
-        request.open(configuration.method, url);
+        request.open(configuration.method, configuration.url);
 
         if (!configuration.isPropertyNullOrUndefined("responseType"))
             request.responseType = configuration.responseType;
@@ -9525,18 +9552,11 @@ WebService.createRequest = configuration => {
                 return;
 
             switch (request.status) {
-                case HTTP_STATUS_CODE_LIST.clientError.unauthorized:
-                    if (!onReady(request)) {
-                        sessionStorage.clear();
-                        boot();
-                    }
-
-                    return;
                 case 0: // 0 == internal error or the HTTP request has been aborted
                     logWarningToConsole("A 0 has been returned instead of an HTTP status.");
                     return; // ready state is "ok", so ignore this.
                 default:
-                    if (!onReady(request))
+                    if (!configuration.onReady(request))
                         throwHttpException(request.status, request.statusText);
             }
         });
@@ -9565,8 +9585,6 @@ WebService.createRequest = configuration => {
 
     return request;
 };
-
-
 //</editor-fold>
 //<editor-fold defaultstate="collapsed" desc="Utilities">
 /**
