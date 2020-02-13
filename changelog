@@ -2,48 +2,53 @@ SS.JS changelog (0.8.0 -> 0.9.0)
 
 Bug fixes:
 
-* ss.js:    Firefox (70.0.1) wasn't happy with static arrow functions.
-* ss.js:    "Illegal variable reference before declaration: message", referring to "constructor(message = 'Unknown error: ' + message)" (the constructor of UnknownError).
-* ss.js:    "Illegal variable reference before declaration: product", referring to the String.prototype.multiply() method.
-* ss.js:    "The types of the getter and setter for property 'value' do not match."
-** ss.js:   ControlKey's "code" property is now called "codePoint".
-* ss.js:    Class inheritance doesn't work when the parent class is ES6 and the child class is ES5. Class WebService has therefore been restored to its old IE5 format.
-* ss.js:    checkOptionalArgumentFull() threw an error if the specified argument was null or undefined.
-* ss.js:    "Missing '...' in type annotation for rest parameter." warning solved by correcting the documentation.
-* ss.js:    Lambda problem solved with String.prototype.loopThroughCharCodes(). In the loop the character index wasn't taken into account.
+* ss.js:        Firefox (70.0.1) wasn't happy with static arrow functions.
+* ss.js:        "Illegal variable reference before declaration: message", referring to "constructor(message = 'Unknown error: ' + message)" (the constructor of UnknownError).
+* ss.js:        "Illegal variable reference before declaration: product", referring to the String.prototype.multiply() method.
+* ss.js:        "The types of the getter and setter for property 'value' do not match."
+** ss.js:       ControlKey's "code" property is now called "codePoint".
+* ss.js:        Class inheritance doesn't work when the parent class is ES6 and the child class is ES5. Class WebService has therefore been restored to its old IE5 format.
+* ss.js:        Method checkOptionalArgumentFull() threw an error if the specified argument was null or undefined.
+* ss.js:        "Missing '...' in type annotation for rest parameter." warning solved by correcting the documentation.
+* ss.js:        Lambda problem solved with String.prototype.loopThroughCharCodes(). In the loop the character index wasn't taken into account.
 
 New features:
 
-* ss.js:    Addition of methods HTMLDocument.prototype.removeElementsByDomIdTemplate() and HTMLDocument.prototype.deleteElementsByDomIdTemplate().
-* ss.js:    More documentation for checkRequiredArgumentFull() and checkOptionalArgumentFull().
-* ss.js:    The string template escape character is now specified in options-ss.js in variable STRING_TEMPLATE_ESCAPE_CHARACTER.
-* ss.js, options-ss.js: Variable "REQUEST_TIME_OUT" has been introduced in options-ss.js.
-* ss.js:    Class Locale has been updated to include new methods: setAsDefault(), getDocumentLocale() and getDefaultLocale().
-* ss.js:    Addition of binary methods createBitMask() and countBits().
-* ss.js:    Addition of the createBinaryNotation() method.
-* ss.js:    Addition of the Id64 class.
-* ss.js:    Addition of the Uuid64.create() method (which is used to create an UUID from bytes).
-* ss.js:    Addition of the COMMON_DATA_TYPE_LIST object.
+* ss.js:        Addition of methods HTMLDocument.prototype.removeElementsByDomIdTemplate() and HTMLDocument.prototype.deleteElementsByDomIdTemplate().
+* ss.js:        More documentation for checkRequiredArgumentFull() and checkOptionalArgumentFull().
+* ss.js:        The string template escape character is now specified in options-ss.js in variable STRING_TEMPLATE_ESCAPE_CHARACTER.
+* ss.js,
+options-ss.js:  Variable "REQUEST_TIME_OUT" has been introduced in options-ss.js.
+* ss.js:        Class Locale has been updated to include new methods: setAsDefault(), getDocumentLocale() and getDefaultLocale().
+* ss.js:        Addition of binary methods createBitMask() and countBits().
+* ss.js:        Addition of the createBinaryNotation() method.
+* ss.js:        Addition of the Id64 class.
+* ss.js:        Addition of the Uuid64.create() method (which is used to create an UUID from bytes).
+* ss.js:        Addition of the COMMON_DATA_TYPE_LIST object.
 
 Removed:
 
-* ss.js:    Methods setBackgroundColor() and getBackgroundColor() have been removed. Either all CSS properties get their own method or none will.
-* ss.js, options-ss.js: variables "APPLICATION_TITLE_DEFAULT", "APPLICATION_TITLE_SEPARATOR", "APPLICATION_FULL_TITLE_DEFAULT" and "GET_APPLICATION_TITLE" have been removed from
-            options-ss.js. These variables are too specific.
-specific.
-** ss.js, options-ss.js:    Because APPLICATION_FULL_TITLE_DEFAULT has been removed from options-ss.js, method QueryParameterList.clearUrlQueryParameterList() must now be called with a
-            title.
-* ss.js:    Methods hasLocaleInSession(), getLocaleFromSession(), getLocale() and deleteLocale() have been removed. See "new features" to see a list of new methods that have been added
-            to Locale. The old way was to use the session storage to save and read the locale in use. The new way is to use the lang attribute of <html>, which is considered to be the
-            "document locale" and should always be present.
-* ss.js:    DomId.isValidCodePoint() has been replaces with DomId.isValidCharacterCode(). There is no need to specifically have to check code points. Just checking the character codes is enough.
-* ss.js:    Static variables QueryParameterList.BOOLEAN_TRUE_PARAMETER_VALUE, QueryParameterList.BOOLEAN_FALSE_PARAMETER_VALUE and QueryParameterList.NULL_PARAMETER_VALUE have been renamed to
-            QueryParameterList.BooleanTrueParameterValue, QueryParameterList.BooleanFalseParameterValue, QueryParameterList.NullParameterValue.
-* ss.js:    Method WebService.createRequest() no longer does anything in case of HTTP status code 401. Previously, in case of HTTP status code 401 and in case on onReady returns false,
-            the storage session was cleared and the application got booted.
+* ss.js:        Methods setBackgroundColor() and getBackgroundColor() have been removed. Either all CSS properties get their own method or none will.
+* ss.js,
+options-ss.js:  variables "APPLICATION_TITLE_DEFAULT", "APPLICATION_TITLE_SEPARATOR", "APPLICATION_FULL_TITLE_DEFAULT" and "GET_APPLICATION_TITLE" have been removed from options-ss.js.
+                These variables are too specific.
+** ss.js,
+options-ss.js:  Because APPLICATION_FULL_TITLE_DEFAULT has been removed from options-ss.js, method QueryParameterList.clearUrlQueryParameterList() must now be called with a title.
+* ss.js:        Methods hasLocaleInSession(), getLocaleFromSession(), getLocale() and deleteLocale() have been removed. See "new features" to see a list of new methods that have been
+                added to Locale. The old way was to use the session storage to save and read the locale in use. The new way is to use the lang attribute of <html>, which is considered
+                to be the "document locale" and should always be present.
+* ss.js:        DomId.isValidCodePoint() has been replaces with DomId.isValidCharacterCode(). There is no need to specifically have to check code points. Just checking the character
+                codes is enough.
+* ss.js:        Method WebService.createRequest() no longer does anything in case of HTTP status code 401. Previously, in case of HTTP status code 401 and in case on onReady returns
+                false, the storage session was cleared and the application got booted.
+* ss.js:        Method throwHttpException() in method Webservice.createRequest() no longer uses the method getOfflineLocalizedText() because it's not located in ss.js.
 
 Changes:
 
-* ss.js:    COMMON_TEXT_LIST.invalidPropertyCannotBeNullorUndefinedTemplate has two properties now (one to specify the name of the object and one to specify the name of the property).
-* ss.js:    COMMON_TEXT_LIST.invalidPropertyDataTypeTemplate has one extra property now (to specify the name of the object).
-* ss.js:    Method WebService.createRequest() has now only one parameter: configuration. See the method documentation for more information.
+* ss.js:        COMMON_TEXT_LIST.invalidPropertyCannotBeNullorUndefinedTemplate has two properties now (one to specify the name of the object and one to specify the name of the
+                property).
+* ss.js:        COMMON_TEXT_LIST.invalidPropertyDataTypeTemplate has one extra property now (to specify the name of the object).
+* ss.js:        Method WebService.createRequest() has now only one parameter: configuration. See the method documentation for more information.
+* ss.js:        Static variables QueryParameterList.BOOLEAN_TRUE_PARAMETER_VALUE, QueryParameterList.BOOLEAN_FALSE_PARAMETER_VALUE and QueryParameterList.NULL_PARAMETER_VALUE have been
+                renamed to QueryParameterList.BooleanTrueParameterValue, QueryParameterList.BooleanFalseParameterValue and QueryParameterList.NullParameterValue.
+
