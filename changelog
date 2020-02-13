@@ -39,6 +39,8 @@ specific.
 * ss.js:    DomId.isValidCodePoint() has been replaces with DomId.isValidCharacterCode(). There is no need to specifically have to check code points. Just checking the character codes is enough.
 * ss.js:    Static variables QueryParameterList.BOOLEAN_TRUE_PARAMETER_VALUE, QueryParameterList.BOOLEAN_FALSE_PARAMETER_VALUE and QueryParameterList.NULL_PARAMETER_VALUE have been renamed to
             QueryParameterList.BooleanTrueParameterValue, QueryParameterList.BooleanFalseParameterValue, QueryParameterList.NullParameterValue.
+* ss.js:    Method WebService.createRequest() no longer does anything in case of HTTP status code 401. Previously, in case of HTTP status code 401 and in case on onReady returns false,
+            the storage session was cleared and the application got booted.
 
 Changes:
 
