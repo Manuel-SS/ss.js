@@ -1,4 +1,4 @@
-![Synergy Structure](http://synergystructure.com/logo-f-gh.svg)
+![logo-f-gh](https://user-images.githubusercontent.com/57337284/160958354-32b56003-5801-4888-9ee9-dcd0a3675a7a.svg)
 
 # The SS.JS framework
 
