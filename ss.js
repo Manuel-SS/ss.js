@@ -1,6 +1,6 @@
 /*!
  * Synergy Structure JavaScript (SS.JS)
- * Copyright © 2019-2021 Synergy Structure® (and other contributors). All rights reserved.
+ * Copyright © 2019-2022 Synergy Structure® (and other contributors). All rights reserved.
  *
  * This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0. If a copy of the MPL was not distributed with this file, You can obtain one at
  * https://mozilla.org/MPL/2.0/.
@@ -8063,11 +8063,6 @@ function getBinaryPrefixIndex(byteList) {
                     binaryPrefixIndexEstimated;
 }
 
-LOCALIZED_TEXTS_MAP.set(
-    COMMON_TEXT_NAME_LIST.bytesStatement,
-    "bytes"
-);
-
 /**
  * @description Creates a binary statement with the specified bytes and the specified binary prefix index.
  * @param {number} byteList The bytes.
@@ -9739,6 +9734,11 @@ class Locale {
  * @type {Map<string, string>}
  */
 let LOCALIZED_TEXTS_MAP = new Map();
+
+LOCALIZED_TEXTS_MAP.set(
+    COMMON_TEXT_NAME_LIST.bytesStatement,
+    "bytes"
+);
 
 //</editor-fold>
 //<editor-fold desc="Unicode">
